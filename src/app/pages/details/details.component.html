@@ -1,0 +1,40 @@
+<app-header></app-header>
+
+<main>
+  <ng-template [ngIf]="loading">
+    <section class="names">
+      <h1 class="normal-name slideInLeft"> {{pokemonDetailed[0].name}} </h1>
+      <h2 class="original-name slideInRight"> {{pokemonDetailed[1].names[0].name}} </h2>
+    </section>
+
+    <section class="status">
+      <img
+        class="img slideInDown"
+        [src]="pokemonDetailed[0].sprites.other.dream_world.front_default"
+        [alt]="pokemonDetailed[0].name"
+      >
+
+      <article class="status_data fadeIn">
+        <section class="list">
+          <ul>
+            <li *ngFor="let value of pokemonDetailed[0].types" [ngStyle]="{ 'background': 'var(--'+value.type.name+')' }">
+              {{value.type.name}}
+            </li>
+          </ul>
+
+          <h3>Dados</h3>
+
+          <ol>
+            <li *ngFor="let value of pokemonDetailed[0].stats">
+              {{value.stat.name}}
+              <strong> {{value.base_stat}} </strong>
+            </li>
+          </ol>
+        </section>
+
+        <a [routerLink]="['']" class="btn btn_secondary">Voltar</a>
+      </article>
+    </section>
+
+  </ng-template>
+</main>

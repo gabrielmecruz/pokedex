@@ -1,0 +1,51 @@
+@import "./rem-calc.scss";
+
+:root {
+  --branco: #fff;
+  --cinza: #efefef;
+
+  --primary-color: #262835;
+  --secondary-color: #ff5473;
+
+  //Pokemon types colors
+  --normal: #8d6e63e5;
+  --fire: #f44336e5;
+  --water: #2196f3e5;
+  --grass: #4caf50e5;
+  --electric: #ffc107e5;
+  --ice: #00e5ffe5;
+  --fighting: #ff9800e5;
+  --poison: #9c27b0e5;
+  --ground: #ffb74de5;
+  --flying: #9fa8dae5;
+  --psychic: #e91e63e5;
+  --bug: #8bc34ae5;
+  --rock: #9e9e9ee5;
+  --ghost: #5c6bc0e5;
+  --dark: #795548e5;
+  --dragon: #283593e5;
+  --steel: #607d8be5;
+  --fairy: #ff4081e5;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  padding: rem-calc(20) 0;
+  border-radius: rem-calc(10);
+
+  text-decoration: none;
+
+  &_primary {
+    color: var(--branco);
+    background: var(--primary-color);
+  }
+
+  &_secondary {
+    color: var(--branco);
+    background: var(--secondary-color);
+  }
+}
